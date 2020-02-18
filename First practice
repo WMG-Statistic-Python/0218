@@ -1,0 +1,11 @@
+#define the drink list
+drink_list = ["martini", "old fashioned", "mojito", "manhattan", "bourbon sour", "heineken", "strongbow gold"]
+
+def check_age(age, list_of_drinks):
+    global new_list_of_drinks
+    if age >= 18:
+        new_list_of_drinks = list_of_drinks  
+    else:
+        remove_list_of_drinks = set(drink_list) & set(list_of_drinks)
+        new_list_of_drinks = [item for item in new_list_of_drinks if item not in drink_list]
+        print ("You are not old enough to purchase", remove_list_of_drinks, "please remove these from order.")
