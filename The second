@@ -1,0 +1,10 @@
+# this function checks if the customer has enough tokens to purchase all the items they wish
+# if the customer does not have enough tokens their order is reduced to an order they have enough tokens to buy
+
+def check_tokens(tokens, list_of_drinks):
+    global new_list_of_drinks
+    new_list_of_drinks = []
+    while tokens > 5:
+        print("There is a 5 token limit")
+        tokens = 5
+print("You do not have any tokens to purchase a drink")
